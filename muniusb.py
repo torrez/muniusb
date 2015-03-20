@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 from subprocess import call
 import xml.etree.ElementTree as ET
@@ -27,7 +27,7 @@ you have a chance to make it.
 stop_url_request = ("http://webservices.nextbus.com/service/publicXMLFeed"
                     "?command=predictions&a=sf-muni&stopId=16994&routeTag=N")
 fast_walk = 8
-slow_walk = 15
+slow_walk = 14
 blink1_cmd = "blink1-tool"
 
 r = requests.get(stop_url_request)
