@@ -28,7 +28,7 @@ stop_url_request = ("http://webservices.nextbus.com/service/publicXMLFeed"
                     "?command=predictions&a=sf-muni&stopId=16994&routeTag=N")
 fast_walk = 8
 slow_walk = 14
-blink1_cmd = "blink1-tool"
+blink1_cmd = "/usr/local/bin/blink1-tool"
 
 r = requests.get(stop_url_request)
 root = ET.fromstring(r.text)
@@ -44,4 +44,4 @@ for departure in list_of_departures:
         call([blink1_cmd, "--rgb=0,100,0"])
         break
     else:
-        call([blink1_cmd, "--rgb=0,0,0"])
+        call([blink1_cmd, "--rgb=100,0,0"])
