@@ -25,9 +25,9 @@ you have a chance to make it.
 """
 
 stop_url_request = ("http://webservices.nextbus.com/service/publicXMLFeed"
-                    "?command=predictions&a=sf-muni&stopId=16994&routeTag=N")
-fast_walk = 8
-slow_walk = 14
+                    "?command=predictions&a=sf-muni&stopId=16995&routeTag=N")
+fast_walk = 5
+slow_walk = 8
 blink1_cmd = "/usr/local/bin/blink1-tool"
 
 r = requests.get(stop_url_request)
